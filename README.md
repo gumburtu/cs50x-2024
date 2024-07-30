@@ -11,5 +11,5 @@ Enjoy.
 
 Rashko Enev
 
-![Screenshot 2024-07-30 at 13 50 59](https://github.com/user-attachments/assets/30dd21d7-b9f4-40d1-b6eb-105ef6a9b417)
+![Screen Shot 2024-07-30 at 13 53 04 PM](https://github.com/user-attachments/assets/161bbe13-50aa-41cc-98a1-a9ac56bd0b77)
 
