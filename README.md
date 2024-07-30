@@ -8,6 +8,7 @@ I have combined all the codes on one page for practicality.
 I used HTML, CSS and Javascript in the production of the game and received support from artificial intelligence applications.
 
 Enjoy.
+
 Rashko Enev
 
 ![Screenshot 2024-07-30 at 13 50 59](https://github.com/user-attachments/assets/30dd21d7-b9f4-40d1-b6eb-105ef6a9b417)
