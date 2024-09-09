@@ -1,259 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+<head>
     <meta charset="utf-8" />
     <title>Number Guessing Game</title>
-    <style>
-      html {
-        font-family: sans-serif;
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f5f5dc;
-      }
-      .container {
-        display: flex;
-        align-items: flex-start;
-        width: 85vw;
-      }
-      .info {
-        margin-right: 20px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        max-width: 300px;
-        flex: 1;
-      }
-      .info h2 {
-        margin-top: 0;
-      }
-      .game-container {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        flex: 2;
-      }
-      .form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .form label {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        font-size: 1.2em;
-        margin-bottom: 10px;
-      }
-      .form input[type="number"] {
-        width: 250px;
-        height: 40px;
-        background-color: #e0f7fa;
-        border: 2px solid #4caf50;
-        border-radius: 15px;
-        padding: 5px;
-        font-size: 1.2em;
-        text-align: center;
-        margin-bottom: 10px;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-      }
-      .button {
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-      }
-      .button:hover {
-        background-color: #45a049;
-      }
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
-      .difficulty {
-        margin-bottom: 15px;
-      }
-      .new-game {
-        display: none;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="info">
-        <h2>How to Play:</h2>
-        <p><strong>Select a Difficulty Level:</strong></p>
-        <ul>
-          <li><strong>Easy:</strong> Guess a number between 1 and 10.</li>
-          <li><strong>Medium:</strong> Guess a number between 1 and 100.</li>
-          <li><strong>Hard:</strong> Guess a number between 1 and 1000.</li>
-        </ul>
-        <p><strong>Guessing Rules:</strong></p>
-        <ul>
-          <li>You have up to 10 turns to find the correct number.</li>
-          <li>
-            After each guess, you'll be informed if your guess is too high or
-            too low.
-          </li>
-        </ul>
-        <p><strong>Good luck, and have fun!</strong></p>
-      </div>
-      <div class="game-container">
-        <h1>Number Guessing Game</h1>
-        <p>
-          We have selected a random number based on the difficulty level. See if
-          you can guess it in 10 turns or fewer. We'll tell you if your guess
-          was too high or too low.
-        </p>
-        <div class="difficulty">
-          <label>
-            <input type="radio" name="difficulty" value="easy" checked /> Easy
-            (1-10)
-          </label>
-          <label>
-            <input type="radio" name="difficulty" value="medium" /> Medium
-            (1-100)
-          </label>
-          <label>
-            <input type="radio" name="difficulty" value="hard" /> Hard (1-1000)
-          </label>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <div class="info">
+                <h2>How to Play:</h2>
+                <p>Welcome to the Number Guessing Game! Here’s how you can play:</p>
+                <p>Select a Difficulty Level:</p>
+                <ul>
+                    <li><strong>Easy:</strong> Guess a number between 1 and 10. You have 3 guesses.</li>
+                    <li><strong>Medium:</strong> Guess a number between 1 and 100. You have 5 guesses.</li>
+                    <li><strong>Hard:</strong> Guess a number between 1 and 1000. You have 10 guesses.</li>
+                </ul>
+                <p><strong>Guessing Rules:</strong></p>
+                <ul>
+                    <li>Enter a number in the input field and click "Submit Guess".</li>
+                    <li>If your guess is correct and you have guesses left, you will see a "Congratulations!" message.</li>
+                    <li>If you use all your guesses without finding the correct number, you will see a "Game Over" message.</li>
+                    <li>The game will alert you if you enter a number that you have already guessed. Please try a different number.</li>
+                </ul>
+                <p><strong>Additional Notes:</strong></p>
+                <ul>
+                    <li><strong>Previous Guesses:</strong> The game keeps track of all your previous guesses to ensure you do not repeat any.</li>
+                    <li><strong>Duplicate Guesses:</strong> If you enter a number that you’ve already guessed, the game will warn you and ask you to enter a different number.</li>
+                </ul>
+                <p><strong>Good luck, and have fun!</strong></p>
+            </div>
+            <div class="game-container">
+                <h1>Number Guessing Game</h1>
+                <p>We have selected a random number based on the difficulty level. See if you can guess it in the allowed number of turns or fewer. We'll tell you if your guess was too high or too low.</p> 
+                <br>
+                <div class="difficulty">
+                    <label>
+                        <input type="radio" name="difficulty" value="easy" checked /> Easy (1-10)
+                    </label>
+                    <label>
+                        <input type="radio" name="difficulty" value="medium" /> Medium (1-100)
+                    </label>
+                    <label>
+                        <input type="radio" name="difficulty" value="hard" /> Hard (1-1000)
+                    </label>
+                </div>
+                <br>
+                <div class="form">
+                    <label for="guessField">Enter a guess: </label>
+                    <input type="number" min="1" max="1000" required id="guessField" class="guessField" />
+                    <input type="submit" value="Submit Guess" class="button guessSubmit" />
+                    <div id="remainingGuesses" class="remainingGuesses">Remaining Guesses: 10</div>
+                    <button class="button new-game">Start New Game</button>
+                </div>
+                <div class="resultParas">
+                    <p class="guesses"></p>
+                    <p class="lastResult"></p>
+                    <p class="lowOrHi"></p>
+                </div>
+            </div>
         </div>
-        <div class="form">
-          <label for="guessField">Enter a guess: </label>
-          <input type="number" min="1" id="guessField" class="guessField" />
-          <input
-            type="submit"
-            value="Submit Guess"
-            class="button guessSubmit"
-          />
-          <button class="button new-game">Start New Game</button>
-        </div>
-        <div class="resultParas">
-          <p class="guesses"></p>
-          <p class="lastResult"></p>
-          <p class="lowOrHi"></p>
-        </div>
-      </div>
     </div>
-    <script>
-      let randomNumber;
-      const guesses = document.querySelector(".guesses");
-      const lastResult = document.querySelector(".lastResult");
-      const lowOrHi = document.querySelector(".lowOrHi");
-      const guessSubmit = document.querySelector(".guessSubmit");
-      const guessField = document.querySelector(".guessField");
-      const difficultyRadios = document.querySelectorAll(
-        'input[name="difficulty"]'
-      );
-      const newGameButton = document.querySelector(".new-game");
-      let guessCount = 1;
-      let maxNumber = 10;
-
-      function setRandomNumber() {
-        randomNumber = Math.floor(Math.random() * maxNumber) + 1;
-      }
-
-      function checkGuess() {
-        const userGuess = Number(guessField.value);
-
-        // Input validation based on difficulty level
-        if (
-          userGuess < 1 ||
-          (difficultyRadios[0].checked && userGuess > 10) ||
-          (difficultyRadios[1].checked && userGuess > 100) ||
-          (difficultyRadios[2].checked && userGuess > 1000)
-        ) {
-          lastResult.textContent = `Please enter a number between 1 and ${maxNumber}.`;
-          lastResult.style.backgroundColor = "orange";
-          return;
-        }
-
-        if (guessCount === 1) {
-          guesses.textContent = "Previous guesses: ";
-        }
-
-        guesses.textContent += userGuess + " ";
-
-        if (userGuess === randomNumber) {
-          lastResult.textContent = "Congratulations! You got it right!";
-          lastResult.style.backgroundColor = "green";
-          lowOrHi.textContent = "";
-          setGameOver();
-        } else if (guessCount === 10) {
-          lastResult.textContent = "!!!GAME OVER!!!";
-          lowOrHi.textContent = "";
-          setGameOver();
-        } else {
-          lastResult.textContent = "Wrong!";
-          lastResult.style.backgroundColor = "red";
-          if (userGuess < randomNumber) {
-            lowOrHi.textContent = "Last guess was too low!";
-          } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = "Last guess was too high!";
-          }
-        }
-
-        guessCount++;
-        guessField.value = "";
-        guessField.focus();
-      }
-
-      function setGameOver() {
-        guessField.disabled = true;
-        guessSubmit.disabled = true;
-        newGameButton.style.display = "block";
-      }
-
-      function resetGame() {
-        guessCount = 1;
-        const resetParas = document.querySelectorAll(".resultParas p");
-        for (const resetPara of resetParas) {
-          resetPara.textContent = "";
-        }
-
-        newGameButton.style.display = "none";
-        guessField.disabled = false;
-        guessSubmit.disabled = false;
-        guessField.value = "";
-        guessField.focus();
-        lastResult.style.backgroundColor = "white";
-        setRandomNumber();
-      }
-
-      difficultyRadios.forEach((radio) => {
-        radio.addEventListener("change", (event) => {
-          const difficulty = event.target.value;
-          if (difficulty === "easy") {
-            maxNumber = 10;
-          } else if (difficulty === "medium") {
-            maxNumber = 100;
-          } else if (difficulty === "hard") {
-            maxNumber = 1000;
-          }
-          guessField.max = maxNumber;
-          guessField.value = "";
-          guesses.textContent = "";
-          lastResult.textContent = "";
-          lowOrHi.textContent = "";
-          setRandomNumber();
-        });
-      });
-
-      guessSubmit.addEventListener("click", checkGuess);
-      newGameButton.addEventListener("click", resetGame);
-      setRandomNumber();
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>

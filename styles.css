@@ -1,0 +1,102 @@
+body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #ffffe0; /* Açık limon sarısı rengi */
+  color: #333;
+  display: flex;
+  justify-content: center; /* Ekranı ortalamak için */
+  align-items: center; /* Ekranı ortalamak için */
+  min-height: 100vh; /* Ekranın tam yüksekliği */
+}
+
+.outer-container {
+  width: 85%;
+  max-width: 1200px; /* Maksimum genişlik */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Panelleri aralıklı yerleştirmek için */
+  gap: 30px; /* Paneller arasında 15 piksel boşluk */
+}
+
+.info, .game-container {
+  width: 48%; /* Panellerin genişliği %48, aralarındaki boşluğu korur */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  text-align: left; /* İçeriği sola hizalamak için */
+}
+
+.game-container {
+  text-align: center; /* İçeriği ortalamak için */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.label {
+  font-size: 1.2rem;
+  margin: 20px 0 10px; /* Üstte 20px, altta 10px boşluk */
+  text-align: center; /* Ortalanmış text */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Formu merkezde hizala */
+}
+
+.form input[type="number"] {
+  padding: 12px;
+  font-size: 1.2rem;
+  width: 100%; /* Genişlik %100 yapıldı */
+  max-width: 220px; /* Maksimum genişlik belirlendi */
+  margin: 10px 0; /* Üst ve alt boşluk eklendi */
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  text-align: center; /* Giriş alanı metni merkezde hizalandı */
+}
+
+.button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Butona yukarıdan boşluk eklendi */
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+#remainingGuesses {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.resultParas {
+  margin-top: 20px;
+}
+
+.lastResult {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc3545; /* Red for emphasis */
+}
+
+.lowOrHi {
+  font-size: 1.2rem;
+  color: #6c757d; /* Grey for additional info */
+  margin-bottom: 20px; /* Low, Medium, Hi */
+}
