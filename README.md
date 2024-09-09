@@ -41,6 +41,4 @@ I hope you find the Number Guessing Game both enjoyable and challenging. Whether
 Enjoy.
 
 Rashko Enev
-
-![Screen Shot 2024-07-30 at 13 53 04 PM](https://github.com/user-attachments/assets/161bbe13-50aa-41cc-98a1-a9ac56bd0b77)
-
+<img width="1434" alt="Screenshot 2024-09-09 at 16 56 42" src="https://github.com/user-attachments/assets/65533154-b30f-45f0-a821-7701cf4054ba">
